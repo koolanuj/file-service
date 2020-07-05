@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>Error page</title>
+    </head>
+
+    <body>
+        <center>
+            <h2>Error occurred during processing</h2>
+            <br/>
+            <h3>Usage:</h3>
+        </center>
+        <left>
+            This application provides following REST APIs to fetch file attributes. Sample calls (in local environment): <br>
+            1) To get attributes of a file: <br>
+            http://localhost:8080/fileservice/filedetail?fileName=C:/Program Files/file-name  <br/><br/>
+            2) To get attributes of ALL files in a directory recursively: <br/>
+            http://localhost:8080/fileservice/dirdetail?dirName=C:/Program%20Files
+            <br/><br/>
+        </left>
+        <center>
+            <h3>Error Details:</h3>
+        </center>
+        <table>
+            <tr>
+                <td>URI Path accessed: </td>
+                <td th:text="${path}"/>
+            </tr>
+            <tr>
+                <td>HTTP Status: </td>
+                <td th:text="${status}"/>
+            </tr>
+            <tr>
+                <td>Date: </td>
+                <td th:text="${timestamp}"/>
+            </tr>
+            <tr>
+                <td>Error Message: </td>
+                <td th:text="${errorShortMsg}"/>
+            </tr>
+            <tr>
+                <td>Details: </td>
+                <td th:text="${errorDetails}"/>
+            </tr>
+        </table>
+    </body>
+</html>
