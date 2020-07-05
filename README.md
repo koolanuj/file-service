@@ -5,8 +5,8 @@
 #### Build and Run
 ```shell
 Use Gradle 6.5.1
-Get into a new directory where you want to create this project
-$ git clone https://github.com/koolanuj/file-service.github
+Create a new directory where you want to create this project and cd into that
+$ git clone https://github.com/koolanuj/file-service.git
 $ cd file-service
 $ gradle clean build
 
