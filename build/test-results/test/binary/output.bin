@@ -1,6 +1,0 @@
-ƒ19:48:15.594 [Test worker] DEBUG com.infra.application.file.FileManagerImpl - Fetching details for file - C:\temp\regularFile.txt
-á19:48:15.608 [Test worker] DEBUG com.infra.application.file.FileManagerImpl - Details fetched for file:'C:\temp\regularFile.txt' are: FileAttributes(name=regularFile.txt, path=C:\temp\regularFile.txt, size=27, fileType=regular-file, accessTime=2020-07-05T14:18:14.684Z, creationTime=2020-07-05T14:18:14.684Z, lastModifiedTime=2020-07-05T14:18:14.684Z)
-r19:48:15.621 [Test worker] DEBUG com.infra.application.file.FileManagerImpl - Checking if file exists or not: ''
-~19:48:15.624 [Test worker] ERROR com.infra.application.file.FileManagerImpl - Filename provided is empty, can't do anything!
-v19:48:15.625 [Test worker] DEBUG com.infra.application.file.FileManagerImpl - Checking if file exists or not: 'null'
-~19:48:15.625 [Test worker] ERROR com.infra.application.file.FileManagerImpl - Filename provided is empty, can't do anything!

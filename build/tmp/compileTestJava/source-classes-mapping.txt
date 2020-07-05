@@ -1,6 +1,0 @@
-com/infra/web/application/junit/FileManagerTest.java
- com.infra.web.application.junit.FileManagerTest
-com/infra/web/integrationtest/FileServiceAppStartTest.java
- com.infra.web.integrationtest.FileServiceAppStartTest
-com/infra/web/application/junit/FileManagerValidationTest.java
- com.infra.web.application.junit.FileManagerValidationTest
