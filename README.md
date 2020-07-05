@@ -4,10 +4,13 @@
 
 #### Build and Run
 ```shell
-$ git clone https://github.com/nvulane/FileSystemLister-REST.git
-$ cd FileSystemLister-REST
-$ gradle clean build # maven needs to be installed on the workstation
+Use Gradle 6.5.1
+Get into a new directory where you want to create this project
+$ git clone https://github.com/koolanuj/file-service.github
+$ cd file-service
+$ gradle clean build
 
+java  -Dspring.profiles.active=local -jar build\libs\file-service-1.0-SNAPSHOT.jar 
 ```
 
 #### How to access RESTful service using Browser
