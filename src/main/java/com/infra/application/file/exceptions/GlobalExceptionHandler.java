@@ -3,10 +3,10 @@ package com.infra.application.file.exceptions;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -19,11 +19,11 @@ import java.time.LocalDateTime;
  */
 
 @Slf4j
-@ControllerAdvice
-public class GlobalExceptionHandler {//} extends ResponseEntityExceptionHandler {
+@RestControllerAdvice
+public class GlobalExceptionHandler {
 
     @ModelAttribute
-    @ResponseStatus(value= HttpStatus.NOT_FOUND, reason="Requested file/dir not found") //404
+    @ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Requested file/dir not found") //404
     @ExceptionHandler({InvalidFileException.class, NoSuchFileException.class, IOException.class})
     public void handleInvalidFileException(HttpServletRequest request, Exception ex, Model model) {
         populateCommonErrorAttributes(request, ex, model);

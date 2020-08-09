@@ -2,6 +2,7 @@ package com.infra.adapters.web.file.controller;
 
 import com.infra.application.file.FileManager;
 import com.infra.domain.file.FileAttributes;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,7 @@ public class FileListingServiceImpl implements FileListingService {
     FileManager fileManager;
 
     @Override
+    @Operation(summary = "Get attributes of ALL files in the given directory recursively")
     @GetMapping(value="/fileservice/dirdetail", produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<FileAttributes>> getDirDetails(@RequestParam(name="dirName") String dir) throws Exception {
         log.info("Dir name extracted from GET request:" + dir);

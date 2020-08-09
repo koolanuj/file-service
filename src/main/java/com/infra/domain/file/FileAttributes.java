@@ -1,6 +1,13 @@
 package com.infra.domain.file;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.validation.constraints.NotBlank;
 
 /**
  * Core domain object to capture of attributes of any file or directory
@@ -12,8 +19,9 @@ import lombok.*;
 @ToString
 @Builder
 public class FileAttributes {
-
+    @NotBlank
     private String name;
+    
     private String path;
     private long size;
     private String fileType;

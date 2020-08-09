@@ -15,6 +15,10 @@ java  -Dspring.profiles.active=local -jar build\libs\file-service-1.0-SNAPSHOT.j
 
 #### How to access RESTful service using Browser
 ```shell
+#Swagger/OpenAPI documentation link
+http://localhost:8080/fileservice/doc/swagger-ui-custom.html
+http://localhost:8080/fileservice/doc/api-docs
+
 #To get attributes of a file
 http://localhost:8080/fileservice/filedetail?fileName=.
 
