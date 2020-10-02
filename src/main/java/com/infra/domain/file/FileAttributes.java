@@ -18,7 +18,7 @@ import javax.validation.constraints.NotBlank;
 @Setter
 @ToString
 @Builder
-public class FileAttributes {
+public class FileAttributes extends BaseEntity {
     @NotBlank
     private String name;
     

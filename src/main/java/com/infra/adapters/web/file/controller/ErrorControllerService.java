@@ -1,7 +1,8 @@
 package com.infra.adapters.web.file.controller;
 
-import com.infra.adapters.web.util.FileUtil;
+import com.infra.adapters.util.FileErrorUtil;
 import org.springframework.boot.web.servlet.error.ErrorController;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
  * object from class/method which are called during processing
  */
 @RestController
+//@ControllerAdvice
 public class ErrorControllerService implements ErrorController {
 
     private final static String ERROR_PATH = "/error";
@@ -26,7 +28,7 @@ public class ErrorControllerService implements ErrorController {
     public ModelAndView handleError() {
         ModelAndView modelAndView = new ModelAndView();
         //modelAndView.addAllObjects(populateErrorViewDetails());
-        modelAndView.addObject("usage", FileUtil.getUsageStr());
+        modelAndView.addObject("usage", FileErrorUtil.getUsageStr());
         modelAndView.setViewName("error");  //name has to be same as template configured, in this case its resources/template/error.html
         return modelAndView;
     }

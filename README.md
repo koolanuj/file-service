@@ -19,12 +19,20 @@ java  -Dspring.profiles.active=local -jar build\libs\file-service-1.0-SNAPSHOT.j
 http://localhost:8080/fileservice/doc/swagger-ui-custom.html
 http://localhost:8080/fileservice/doc/api-docs
 
-#To get attributes of a file
+#To get attributes of a file from local filesystem
 http://localhost:8080/fileservice/filedetail?fileName=.
 
-#To get attributes of ALL files in a directory recursively
+#To get attributes of ALL files in a directory recursively from local filesystem
 http://localhost:8080/fileservice/dirdetail?dirName=.
 http://localhost:8080/fileservice/dirdetail?dirName=C:/Program Files
+
+
+#DB - get all files from AZ MySql DB
+http://localhost:8080/db/allfiledetail
+
+#DB - get a specific file details from DB based on file ID
+http://localhost:8080/db/getallfiledetail
+
 ```
 
 #### How to access RESTful service using command line

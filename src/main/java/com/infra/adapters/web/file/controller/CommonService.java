@@ -1,6 +1,6 @@
 package com.infra.adapters.web.file.controller;
 
-import com.infra.adapters.web.util.FileUtil;
+import com.infra.adapters.util.FileErrorUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +15,7 @@ public class CommonService {
     @GetMapping(value={"/", "/welcome"}, produces = "text/html")
     public String home(){
         //TODO: customize it with welcome.html template
-        return FileUtil.getUsageStr();
+        return FileErrorUtil.getUsageStr();
     }
 
 }
