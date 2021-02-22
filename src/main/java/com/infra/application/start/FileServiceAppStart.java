@@ -11,9 +11,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 /**
  * Application startup using spring boot
  */
-@Slf4j
+
 //used to exclude loading Hibernate/JPA/Entity beans at startup
 //@SpringBootApplication(scanBasePackages = {"com.infra"}, exclude = HibernateJpaAutoConfiguration.class)
+@Slf4j
 @SpringBootApplication(scanBasePackages = {"com.infra"})
 @EntityScan(basePackages = {"com.infra"})
 @EnableJpaRepositories(basePackages = {"com.infra"})
