@@ -40,3 +40,15 @@ http://localhost:8080/db/filedetail?fileId=2
 $ curl -X GET http://localhost:8080/fileservice/filedetail?fileName=.  #To get attributes of a file
 $ curl -X GET http://localhost:8080/fileservice/dirdetail?dirName=C:/Program%20Files  #To get attributes of ALL files in a directory recursively
 ```
+
+#### How to build/run using docker
+##### Build
+- Need docker daemon running
+- docker build –t file-service:nodb  .
+##### Run
+- docker run –d –p 8080:8080  file-service:nodb
+- docker logs –f <cdf>   ##to tail logs
+##### Push to repo
+- docker tag file-service:nodb anukumar/file-service:nodb   ##tag it as repo-name
+- docker images	## check
+- docker push anukumar/file-service:nodb		##save in dockerhub.com
