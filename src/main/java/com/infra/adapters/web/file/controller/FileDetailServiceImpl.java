@@ -24,7 +24,7 @@ public class FileDetailServiceImpl implements FileDetailService {
     FileManager fileManager;
 
     @Override
-    @Operation(summary = "Get attributes of the given file")
+    @Operation(summary = "Get attributes of the given file, provided in query string as absolute path")
     @GetMapping(value="/fileservice/filedetail", produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<FileAttributes> getFileDetails(@RequestParam(name="fileName") String file) throws Exception {
         log.debug("File name extracted from GET request:" + file);
